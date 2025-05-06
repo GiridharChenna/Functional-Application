@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Weather Forcast</title>
+        <link rel="stylesheet" href="style.css">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    </head>
+        
+    <body>
+
+        <div class="container">
+            
+            <div class="header">
+                <i class="fa-solid fa-location-dot"></i>
+                <!-- <p id="city">Brooklyn, New York, USA</p> -->
+                <div class="search-box">
+                    <div class="row">
+                        <input type="text" value="Brooklyn" id="input-box" placeholder="search">
+                        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                    <div class="result-box"></div>
+                </div>
+                
+                <select id="city-dropdow" select></select>
+                <p id="day-date"><span id="day-of-week">Friday</span>, <span id="month-of-year">January</span> <span id="day-of-month"> 4</span></p>
+            </div>
+
+            <div class="weather-content">
+                <div class="weather-info">
+                    <div class="weather-details">
+                        <h2 id="city">Brooklyn</h2>
+                        <div class="temperature">
+                            <h1 id="temp">16</h1>
+                            <sup>°C</sup> 
+                        </div>
+                        
+                        <h3 id="current-weather">Strom with Rain</h3>
+
+                        <h2 id="feel-like">Feels Like <span id="feel-like-temp">56<sup>°C</sup></span> </h2>
+
+                        <div class="additional-data">
+                            <div class="info">
+                                <div class="info-data">
+                                    <!-- <i class="fa-solid fa-wind"></i> -->
+                                    <p>Wind</p>
+                                    <img id="wind" src="icons/wind.svg" alt="">
+                                </div>
+                                <div class="info-data">
+                                    <h3 id="wind-speed">2.4km/h</h3>
+                                </div>
+                            </div>
+
+                            <div class="info">
+                                <div class="info-data">
+                                    <!-- <i class="fa-solid fa-temperature-arrow-up"></i> -->
+                                    <p>Humidity</p>
+                                    <img id="humidity" class="humidity-img" src="icons/humidity.svg" alt="">
+                                </div>
+                                
+                                <div class="info-data">
+                                    <h3 id="humidity-data">70<span>%</span></h3>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+
+                    <div class="weather-graphic-represetation">
+
+                        <img id="main-icon" src="icons/01d.svg" alt="sun">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <script src="searchSuggestion.js"></script>
+        <script src="loadingCities.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>
